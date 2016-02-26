@@ -20,8 +20,8 @@ http://amazon-germany.siiguides.com/de/de/
 *Amazon.de Learn redesign for large screen display*  
 http://amazon-germany-tv.siiguides.com/de/de/samsung-ue48ju6560-curved-3029/articles
 
-# Resume (also available in repo as PDF without example links)
-
+# Resume
+*also available in repo as a PDF without the example links*
 
 Jordan Eliastam  
 55 McCormack Ave  
