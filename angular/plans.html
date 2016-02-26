@@ -1,0 +1,38 @@
+<div id="plans">
+    <section class="container">
+        <h1>Select a carrier to view their maps &amp; plans</h1>
+        <ul>
+            <li>
+                <input type="radio" name="carrier" class="carrier" ng-click="carrier='AT&T'">
+                <label class="att">
+                    <span>AT&T</span>
+                </label>
+            </li>
+            <li>
+                <input type="radio" name="carrier" class="carrier" ng-click="carrier='Sprint'">
+                <label class="sprint">
+                    <span>Sprint</span>
+                </label>
+            </li>
+            <li>
+                <input type="radio" name="carrier" class="carrier" ng-click="carrier='StraightTalk'">
+                <label class="straight-talk">
+                    <span>Straight Talk</span>
+                </label>
+            </li>
+            <li>
+                <input type="radio" name="carrier" class="carrier" ng-click="carrier='Verizon'">
+                <label class="verizon">
+                    <span>Verizon</span>
+                </label>
+            </li>
+            <li>
+                <input type="radio" name="carrier" class="carrier" ng-click="carrier='WalmartFamilyMobile'">
+                <label class="family-mobile">
+                    <span>Walmart Family Mobile</span>
+                </label>
+            </li>
+        </ul>
+        <carrier-plan carrier="{{ carrier }}"></carrier-plan>
+    </section>
+</div>

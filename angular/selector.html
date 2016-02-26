@@ -1,0 +1,344 @@
+<div id="selector">
+    <section>
+        <div id="step0" class="step container">
+            <h1>Need help choosing your mobile?</h1>
+            <h3>Answer seven questions and find the mobiles that are most appropriate for you</h3>
+            <button class="btn primary continue">Match me!</button>
+        </div>
+        <div id="step1" class="step">
+            <h1>How often do you take the following types of photos and videos on your mobile?</h1>
+            <div class="container">
+                <div class="pull-left">
+                    <img src="img/icon-family-friends.png">
+                    <div><h4>Family &amp; Friends</h4></div>
+                </div>
+                <div class="pull-right">
+                    <div class="slider">
+                        <input type="text" ng-model="model.familyFriends">
+                    </div>
+                    <ul>
+                        <li>No Preference</li>
+                        <li>Rarely</li>
+                        <li>Frequently</li>
+                        <li>Most Often</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="pull-left">
+                    <img src="img/icon-sporting-events.png">
+                    <div><h4>Sporting Events</h4></div>
+                </div>
+                <div class="pull-right">
+                    <div class="slider">
+                        <input type="text" ng-model="model.sportingEvents">
+                    </div>
+                    <ul>
+                        <li>No Preference</li>
+                        <li>Rarely</li>
+                        <li>Frequently</li>
+                        <li>Most Often</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="pull-left">
+                    <img src="img/icon-traveling-sightseeing.png">
+                    <div><h4>Traveling &amp; Sightseeing</h4></div>
+                </div>
+                <div class="pull-right">
+                    <div class="slider">
+                        <input type="text" ng-model="model.travelingSightseeing">
+                    </div>
+                    <ul>
+                        <li>No Preference</li>
+                        <li>Rarely</li>
+                        <li>Frequently</li>
+                        <li>Most Often</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="step2" class="step">
+            <h1>What do you use your mobile for?</h1>
+            <ul>
+                <li>
+                    <input type="radio" name="entertainment" ng-model="model.entertainment" value="noPreference">
+                    <label class="no-preference">
+                        <span>No preference</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="entertainment" ng-model="model.entertainment" value="videos">
+                    <label class="videos">
+                        <span>Videos</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="entertainment" ng-model="model.entertainment" value="music">
+                    <label class="music">
+                        <span>Music</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="entertainment" ng-model="model.entertainment" value="videogames">
+                    <label class="videogames">
+                        <span>Games</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="entertainment" ng-model="model.entertainment" value="booksMagazines">
+                    <label class="books-magazines">
+                        <span>Books &amp; Magazines</span>
+                    </label>
+                </li>
+            </ul>
+            <h1>How do you prefer to communicate on your mobile?</h1>
+            <ul>
+                <li>
+                    <input type="radio" name="communication" ng-model="model.communication" value="noPreference">
+                    <label class="no-preference">
+                        <span>No preference</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="communication" ng-model="model.communication" value="social">
+                    <label class="social">
+                        <span>Social Networking</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="communication" ng-model="model.communication" value="callsMessages">
+                    <label class="calls-messages">
+                        <span>Calls &amp; Messages</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="communication" ng-model="model.communication" value="videoCalls">
+                    <label class="video-calls">
+                        <span>Video Calls</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="communication" ng-model="model.communication" value="business">
+                    <label class="business">
+                        <span>International</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div id="step3" class="step">
+            <h1>Which style of mobile do you prefer?</h1>
+            <ul>
+                <li>
+                    <input type="checkbox" class="style nopref" ng-model="model.style.noPref">
+                    <label class="no-preference">
+                        <span>No preference</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="style" ng-model="model.style.slimSleek">
+                    <label class="slim-sleek">
+                        <span>Slim &amp; Sleek</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="style" ng-model="model.style.curvyComfortable">
+                    <label class="curvy-comfortable">
+                        <span>Curvy &amp; Comfortable</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="style" ng-model="model.style.toughRugged">
+                    <label class="tough-rugged">
+                        <span>Tough &amp; Rugged</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="style" ng-model="model.style.smallCompact">
+                    <label class="small-compact">
+                        <span>Small &amp; Compact</span>
+                    </label>
+                </li>
+            </ul>
+            <h1>Which style of mobile do you prefer?</h1>
+            <ul>
+                <li>
+                    <input type="checkbox" class="keyboard nopref" ng-model="model.keyboard.noPref">
+                    <label class="no-preference">
+                        <span>No preference</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="keyboard" ng-model="model.keyboard.touchscreen">
+                    <label class="touchscreen">
+                        <span>Touchscreen</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="keyboard" ng-model="model.keyboard.sliding">
+                    <label class="sliding">
+                        <span>Sliding Keyboard</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="keyboard" ng-model="model.keyboard.static">
+                    <label class="static">
+                        <span>Static Keyboard</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="keyboard" ng-model="model.keyboard.number">
+                    <label class="numberpad">
+                        <span>Number Pad</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div id="step4" class="step">
+            <h1>What is your preferred carrier?</h1>
+            <ul>
+                <!-- Always first li -->
+                <li>
+                    <input type="checkbox" class="carrier nopref" ng-model="model.carrier.noPref">
+                    <label class="no-preference">
+                        <span>No Preference</span>
+                    </label>
+                </li>
+                <!-- End -->
+                <!-- template code for angular -->
+                <!--<li ng-repeat="carrier in data_obj">
+                    <input type="checkbox" class="carrier" ng-model="{{carrier.model}}">
+                    <label class="{{carrier.slug}}">
+                        <span>{{carrier.name}}</span>
+                    </label>
+                </li>-->
+                <!-- End template -->
+                <li>
+                    <input type="checkbox" class="carrier" ng-model="model.carrier.att">
+                    <label class="att">
+                        <span>AT&T</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="carrier" ng-model="model.carrier.sprint">
+                    <label class="sprint">
+                        <span>Sprint</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="carrier" ng-model="model.carrier.straightTalk">
+                    <label class="straight-talk">
+                        <span>Straight Talk</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="carrier" ng-model="model.carrier.verizon">
+                    <label class="verizon">
+                        <span>Verizon</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="carrier" ng-model="model.carrier.familyMobile">
+                    <label class="family-mobile">
+                        <span>Walmart Family<br>Mobile</span>
+                    </label>
+                </li>
+            </ul>
+            <h1>What is your preferred operating system?</h1>
+            <ul>
+                <li>
+                    <input type="checkbox" class="os nopref" ng-model="model.os.noPref">
+                    <label class="no-preference">
+                        <span>No Preference</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="os" ng-model="model.os.apple">
+                    <label class="ios">
+                        <span>iOS</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="os" ng-model="model.os.android">
+                    <label class="android">
+                        <span>Android</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="os" ng-model="model.os.windows">
+                    <label class="windows">
+                        <span>Windows</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="os" ng-model="model.os.blackberry">
+                    <label class="blackberry">
+                        <span>Blackberry</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" class="os" ng-model="model.os.basic">
+                    <label class="basic">
+                        <span>Basic</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <!--<div id="step5" class="step">
+            <h1>How much are you looking to spend?</h1>
+            <ul>
+                <li>
+                    <input type="checkbox" class="budget nopref" ng-model="model.budget.noPref">
+                    <label class="no-preference">
+                        <span>All options</span>
+                    </label>
+                    <h3>All options</h3>
+                    <p>Not quite sure what you're looking for?<br /><br />
+                        See all the options and decide later.</p>
+                </li>
+                <li>
+                    <input type="checkbox" class="budget" ng-model="model.budget.low">
+                    <label class="low">
+                        &lt;!&ndash;<span>$</span>&ndash;&gt;
+                    </label>
+                    <h3>Entry-level</h3>
+                    <p>Entry-level mobiles have basic features you need at an affordable price.<br /><br />
+                        Make calls, send messages and use other basic apps.</p>
+                </li>
+                <li>
+                    <input type="checkbox" class="budget" ng-model="model.budget.med">
+                    <label class="med">
+                        &lt;!&ndash;<span>$$</span>&ndash;&gt;
+                    </label>
+                    <h3>Mid-range</h3>
+                    <p>Mid-range mobiles have a bit more to offer.<br /><br />
+                        That means larger screens, faster processors, better battery life and more.</p>
+                </li>
+                <li>
+                    <input type="checkbox" class="budget" ng-model="model.budget.high">
+                    <label class="high">
+                        &lt;!&ndash;<span>$$$</span>&ndash;&gt;
+                    </label>
+                    <h3>High-end</h3>
+                    <p>These are the best mobiles on the market.<br /><br />
+                        Top-of-the-line camera, call quality and overall experience.</p>
+                </li>
+            </ul>
+        </div>-->
+        <div class="step-nav">
+            <ul>
+                <li>Step 1<br><span>Media</span></li>
+                <li>Step 2<br><span>Usage</span></li>
+                <li>Step 3<br><span>Style &amp; Keyboard</span></li>
+                <li>Step 4<br><span>Carrier &amp; OS</span></li>
+                <!--<li>Step 5<br><span>Budget</span></li>-->
+            </ul>
+            <button class="btn primary continue">Continue</button>
+            <div>
+                <a class="back" href="javascript:void(0);">Back</a>
+                <a class="start-over" href="selector">Start Over</a>
+            </div>
+        </div>
+    </section>
+</div>

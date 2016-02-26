@@ -1,0 +1,262 @@
+{{!*************************}}
+{{!** load product images **}}
+{{!*************************}}
+{{#if load_product_images}}
+	<div class="title-page float-left">{{page_title}}</div>
+    <div class="icon-container float-left">
+        <div id="pi_edit_client_settings_button" class="icon-settings float-left"></div>
+    </div>
+	<div class="float-right">
+        <div id="pi_product_name" class="title-section float-left">No Product Selected</div>
+		<div id="pi_change_product" class="float-left simply-select-product-selection-button form-button form-input-spacer form-button-gray" callback="toolbox.simply_select.product_images.changeProduct">
+			Change Product
+		</div>
+		<div class="float-left form-input-spacer">
+			<select id="pi_language_select" name="pi_language_select" class="form-input form-input-spacer">
+				<option value="0">Language</option>
+				{{#each data_obj.languages}}
+					<option value="{{language_id}}">{{language_name}}</option>
+				{{/each}}
+			</select>
+		</div>
+	</div>
+    <div class="clear"></div>
+	<div class="header-divider"></div>
+	<div id="pi_product_images_container">
+        Select a Product and Language to continue.
+    </div>
+{{/if}}
+
+{{!******************************}}
+{{!** Load product images List **}}
+{{!******************************}}
+{{#if load_product_images_list}}
+	<div class="content-column-left">
+        <div id="pi_image_shot_edit" class="form-button form-button-gray float-left form-input-spacer">Image Shot Management</div>
+        <div class="clear"></div>
+        {{#if image_list_empty}}
+			<div class="list-row-fake">
+				There are no product image shots for this client.	
+			</div>
+		{{else}}
+			<div id="pi_product_product_images_container">
+				<div class="clear"></div>
+				<div class="iu-tab-body">
+				    <form class="toolbox-form" enctype="multipart/form-data" method="post" action="">
+				    	<input type="hidden" name="folder" id="folder" value="/product_images/{{client_id}}/{{client_product_id}}" />
+                        {{#compare client_settings.product_image_image_required 1 operator="=="}}
+                            <input type="hidden"
+                                   id="image_width"
+                                   name="image_width"
+                                   class="toolbox-form"
+                                   required="required"
+                                   value="{{client_settings.product_image_image_width}}" />
+                            <input type="hidden"
+                                   id="image_height"
+                                   name="image_height"
+                                   class="toolbox-form"
+                                   required="required"
+                                   value="{{client_settings.product_image_image_height}}">
+                        {{/compare}}
+	    				{{#each data_obj.product_images}}
+	    					<div class="iu-image-container float-left" product_image_shot_id="{{product_image_shot_id}}">
+	    						<div class="iu-image-body">
+	    							{{#isSet product_image_file_name}}
+	    								<a class="iu-image" target="_blank" href="load_image.php?src=product_images/{{client_id}}/{{client_product_id}}/{{product_image_file_name}}.png">
+	    								   <img src="load_image.php?src=product_images/{{client_id}}/{{client_product_id}}/{{product_image_file_name}}_thmb.png" />
+	    								</a>
+	    							{{else}}			
+	    								<img class="iu-image" src="/img/product_placeholder.png" />
+	    							{{/isSet}}
+	    						</div>
+	    						<div class="iu-image-footer">
+	    							<div class="iu-image-name font-size-11 float-left">{{product_image_shot_name}}</div>
+	    							{{#isSet product_image_file_name}}
+	    								<div class="icon-delete margin-0 float-right" product_product_image_shot_id="{{product_product_image_shot_id}}" authentication="{{authentication}}"></div>
+	    							{{else}}
+	    							{{/isSet}}
+	    							<div class="iu-file-upload-container float-right">
+	    								<div class="icon-edit margin-0"></div>
+	    								<input id="image_{{product_image_shot_id}}" type="file" name="image_{{product_image_shot_id}}" class="image_file" filetype="image" product_product_image_shot_id="{{product_product_image_shot_id}}" product_image_shot_id="{{product_image_shot_id}}">
+	    							</div>
+	    							<div class="form-status hidden" association="image_{{product_image_shot_id}}">here</div>
+	    							<div class="clear"></div>
+	    						</div>
+	    					</div> 
+	    				{{/each}}
+					</form>
+					<div class="clear"></div>
+				</div>	
+			</div>
+		{{/if}}
+	</div>
+	<div class="content-column-right">
+		{{#isSet data_obj.access_product_swatch_management}}
+            <div id="pi_swatch_management" class="form-button form-button-gray float-left form-input-spacer">Swatch Management</div>
+		{{/isSet}}
+		
+		<div id="pi_assign_product_swatch" class="form-button width-18-true form-button-gray float-right">Add</div>
+		<select id="pi_select_swatch" name="pi_select_swatch" class="form-input form-input-spacer width-25 float-right">
+			<option value="0">-swatch-</option>
+			{{#each data_obj.swatch}}
+				<option value="{{product_swatch_id}}">{{product_swatch_name}}</option>
+			{{/each}} 
+		</select>
+		<div class="clear"></div>
+		
+		<div id="pi_product_product_swatch_container">
+			{{#if swatch_list_empty}}
+				<div class="list-row-fake">
+					There are no swatches set for this product.	
+				</div>
+			{{else}}
+				{{#each data_obj.product_swatches}}
+					<li class="list-row" depth="product_product_swatch" product_product_swatch_id="{{product_product_swatch_id}}" product_swatch_id="{{product_swatch_id}}" shown="{{shown}}">
+						<svg width="24" height="24" class="swatch_preview"><rect x="0" y="0" rx="5" ry="5" width="24" height="24" style="fill:#{{product_swatch_color}};stroke:#c0c0c0;stroke-width:0.7" /></svg>
+			            {{product_swatch_name}}{{#if shown}} (shown)
+                        <div class="float-right icon-container">
+                            <div class="icon-delete float-left"></div>
+                            <div class="clear"></div>
+                        </div>
+			            {{else}}
+				            <div class="float-right icon-container">
+				            	<div class="icon-shown float-left">Make Shown</div>
+				            	<div class="icon-delete float-left"></div>
+				            	<div class="clear"></div>
+				            </div>
+				        {{/if}}
+			        </li>
+			    {{/each}}
+			{{/if}}
+		</div>
+	</div>
+{{/if}}
+
+{{!******************************}}
+{{!*** Load Swatch Management ***}}
+{{!******************************}}
+{{#if full_obj.load_swatch_management}}
+	<div id="form_container" class="width-100">
+        <label class="form-label" for="pi_manufacturer_id">Manufacturer</label>
+        <select id="pi_manufacturer_id" name="pi_manufacturer_id" class="form-input" required="required">
+            <option value="">-- select all --</option>
+            {{#each full_obj.data_obj.manufacturer}}
+                <option value="{{manufacturer_id}}">{{manufacturer_name}}</option>
+            {{/each}}
+        </select>
+
+		<label class="form-label" for="pi_swatch_name">Swatch Name</label>
+		<input type="text" class="form-input" name="pi_swatch_name" id="pi_swatch_name" required="required" />
+		<div class="form-status hidden" association="pi_swatch_name">Please enter a swatch name</div>
+
+		<label class="form-label" for="pi_swatch_name">Swatch Color</label><br />
+		<input type="text" class="form-input" name="pi_swatch_color" id="pi_swatch_color" maxlength="6" expected_length="6" required="required" />
+		<div class="form-status hidden" association="pi_swatch_color">Please enter a swatch color</div>
+
+		<div class="form-status hidden" association="pi_manufacturer_id">Please select a manufacturer</div>
+
+		<div class="form-button form-button-gray float-right" id="pi_add_swatch">Add Swatch</div><br />
+		<div class="clear"></div>
+
+		<div class="title-section">Swatches</div>
+		<div id="pi_swatch_container" class="max-height-150 overflow-y-scroll">
+			{{#if full_obj.data_obj.swatch}}
+				{{#each full_obj.data_obj.swatch}}
+			        <div class="list-row" product_swatch_id="{{product_swatch_id}}" product_swatch_name="{{product_swatch_name}}" manufacturer_id="{{manufacturer_id}}" used_count="{{used_count}}">
+						<svg width="24" height="24" class="swatch_preview"><rect x="0" y="0" rx="5" ry="5" width="24" height="24" style="fill:#{{product_swatch_color}};stroke:#c0c0c0;stroke-width:0.7" /></svg>
+			            <span class="hideable">{{manufacturer_name}} - </span>{{product_swatch_name}} (&#35;{{product_swatch_color}})
+			            <div class="float-right icon-container">
+			            	<div class="icon-delete float-left"></div>
+			            </div>
+			        </div>
+			    {{/each}}
+			    <div id="pi_no_swatches" class="list-row-fake hidden">There are no swatches for selected manufacturer</div>
+			{{else}}		
+				<div class="list-row-fake">
+					There are no Swatches.	
+				</div>
+			{{/if}}
+		</div>
+	</div>
+	<div class="clear"></div>
+{{/if}}
+
+{{!*******************************}}
+{{!* Load Image Shot Management **}}
+{{!*******************************}}
+{{#if full_obj.load_image_shot_management}}
+    <div id="form_container" class="width-100">
+        <div id="pi_modal_add_edit_container" class="width-100">
+            <label class="form-label float-left margin-10-right inline" for="pi_modal_image_shot_name_field">Image Shot Name</label>
+            <input type="text" id="pi_modal_image_shot_name_field" name="pi_image_shot_name" class="form-input width-40 float-left inline">
+            <div id="pi_modal_add_update_image_shot" class="form-button width-18-true form-button-green float-right inline">Add</div>
+            <div class="clear"></div>
+            <div class="form-status hidden" association="pi_image_shot_name">Image shot name exists or is invalid</div>
+        </div>
+
+        <label class="form-label" for="pi_modal_image_shots_container">Image Shots</label>
+        <div id="pi_modal_image_shots_container" name="pi_modal_image_shots_contianer" class="max-height-350">
+			{{#each full_obj.data_obj}}
+			<div class="list-row" product_image_shot_id="{{product_image_shot_id}}" product_image_shot_name="{{product_image_shot_name}}">
+				{{product_image_shot_name}}
+                <div class="float-right icon-container">
+                    <div class="icon-delete float-left"></div>
+                </div>
+			</div>
+			{{/each}}
+        </div>
+
+    <div class="clear"></div>
+{{/if}}
+
+{{!************************************************}}
+{{!** Edit Client Settings modal - Client Select **}}
+{{!************************************************}}
+{{#if full_obj.edit_client_settings_modal}}
+        <label for="pi_client_settings_client_select" class="modal-label float-left">Client</label>
+        <select id="pi_client_settings_client_select" form_input="yes" class="modal-input float-right width-75 margin-10-bottom" name="pi_client_settings_client_select" required="required" >
+            <option value="0"></option>
+            {{#each full_obj.data_obj}}
+                <option value="{{client_id}}">{{client_name}}</option>
+            {{/each}}
+        </select>
+        <div class="clear"></div>
+        <div id="pi_client_settings_container"></div>
+{{/if}}
+
+{{!**************************************************}}
+{{!** Edit Client Settings modal - Client Settings **}}
+{{!**************************************************}}
+{{#if populate_client_settings}}
+    {{#if list_empty}}
+            <span class="error">Client Settings Not Found</span>
+    {{else}}
+            <label for="pi_client_settings_image_required" class="modal-label float-left">Image Required?</label>
+            <div class="pi_modal_input_group float-right width-68">
+                <input type="checkbox"
+                       value="1"
+                       id="pi_client_settings_image_required"
+                       name="pi_client_settings_image_required"
+                       form-input="yes"
+                       class="modal-input float-left width-10 margin-10-right margin-10-top"
+                       {{#compare data_obj.product_image_image_required 1 operator="=="}}checked{{/compare}}>
+                <input type="number"
+                       value="{{data_obj.product_image_image_width}}"
+                       id="pi_client_settings_image_width"
+                       name="pi_client_settings_image_width"
+                       form-input="yes"
+                       class="modal-input float-left width-33"
+					   {{#compare data_obj.product_image_image_required 1 operator="=="}}required{{/compare}}>
+                <span class="float-left margin-10-top">&nbsp;x&nbsp;</span>
+                <input type="number"
+                       value="{{data_obj.product_image_image_height }}"
+                       id="pi_client_settings_image_height"
+                       name="pi_client_settings_image_height"
+                       form-input="yes"
+                       class="modal-input float-left width-33"
+					   {{#compare data_obj.product_image_image_required 1 operator="=="}}required{{/compare}}>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+    {{/if}}
+{{/if}}

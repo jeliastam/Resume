@@ -1,0 +1,152 @@
+{{!******************************}}
+{{!*Load Tech Specs Management **}}
+{{!******************************}}
+{{#if load_tech_specs_management}}	
+	<div class="title-page float-left">{{page_title}}</div>
+	<div class="float-right">
+	    <div id="tsm_product_type_name" product_type_id="" class="title-section float-left">No Product Type Selected</div>
+	    <div id="tsm_change_product_type" class="simply-select-product-type-selection-button form-button form-button-gray float-left margin-10-right" callback="toolbox.simply_select.tech_specs_management.changeProductType">Change Product Type</div>
+	</div>
+	<div class="clear"></div>
+	<div class="header-divider"></div>
+	<div id="tsm_tech_spec_category_container" class="form-two-column">
+        <div id="tsm_left"></div>
+        <div id="tsm_right"></div>
+    </div>
+{{/if}}
+
+{{!******************************}}
+{{!*Load Tech Specs Categories **}}
+{{!******************************}}
+{{#if load_tech_spec_category_list}}
+    <div id="tsm_add_category" class="form-button form-button-gray float-left margin-10-bottom">Add Tech Spec Category</div>
+    <div class="clear"></div>
+    {{#if list_empty}}
+    <div class="list-row-fake">
+        Empty.
+    </div>
+    {{else}}
+    <div class="scroll-box">
+        {{#each data_obj}}
+        <li class="recursive-list-row" depth="tech_spec_category" tech_spec_category_name="{{tech_spec_category_name}}" tech_spec_category_id="{{tech_spec_category_id}}" tech_spec_field_count="{{tech_spec_field_count}}">
+            {{tech_spec_category_name}}
+            <div class="list-row-count float-right">{{tech_spec_field_count}}</div>
+            <div class="float-right icon-container">
+                <div class="icon-add float-left" title="Add a Tech Spec field"></div>
+                <div class="icon-edit float-left"></div>
+                <div class="icon-delete float-left"></div>
+                <div class="clear"></div>
+            </div>
+        </li>
+	    {{/each}}
+    </div>
+	{{/if}}
+{{/if}}
+
+{{!***************************}}
+{{!* Load Tech Specs Fields **}}
+{{!***************************}}
+{{#if load_tech_spec_fields}}
+    <div class="scroll-box">
+    {{#each data_obj}}
+        <ul class="recursive-child-container hidden">
+            {{#each field}}
+                <li class="list-row" depth="tech_spec_field" tech_spec_category_id="{{../tech_spec_category_id}}" tech_spec_field_name="{{tech_spec_field_name}}" tech_spec_field_type="{{tech_spec_field_type}}" tech_spec_field_id="{{tech_spec_field_id}}">
+                    <div class="icon-grip float-left"></div>
+                    <div class="list-row-item">{{tech_spec_field_name}}</div>
+                    <div class="list-row-item tooltip">
+                        {{tech_spec_field_type}}
+                        <span>{{{option}}}</span>
+                    </div>
+                    <div class="float-right icon-container">
+                        <div class="icon-edit float-left"></div>
+                        <div class="icon-delete float-left"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <div class="clear"></div>
+            {{/each}}
+        </ul>
+    {{/each}}
+    </div>
+{{/if}}
+
+
+{{!******************************}}
+{{!*Load Add Category ***********}}
+{{!******************************}}
+{{#if full_obj.load_add_category}}
+	<div id="form_container" class="width-100">
+		<input type="hidden" name="form_product_type_id" id="form_product_type_id" value="{{full_obj.data_obj.product_type_id}}" />
+		<input type="hidden" name="form_tech_spec_category_id" id="form_tech_spec_category_id" value="{{full_obj.data_obj.tech_spec_category_id}}" />
+	
+		<label class="form-label" for="form_tech_spec_category_name">Tech Spec Category Name</label>
+		<input type="text" class="form-input" name="form_tech_spec_category_name" id="form_tech_spec_category_name" value="{{full_obj.data_obj.tech_spec_category_name}}" required="required" />
+		<div class="form-status hidden" association="form_tech_spec_category_name">Please enter a Tech Spec Category Name.</div>
+	</div>
+{{/if}}
+
+{{#macro "tech-spec-option-item"}}
+	<div class="list-row" tech_spec_option_id="{{tech_spec_option_id}}" tech_spec_option_name="{{tech_spec_option_name}}" >
+		<span class="techspec-name">{{tech_spec_option_name}}</span>
+		<div class="float-right icon-container" style="display:none">
+			<div class="icon-delete float-left"></div>
+		</div>
+	</div>
+{{/macro}}
+
+{{!******************************}}
+{{!*Load Add Edit Fields ********}}
+{{!******************************}}
+{{#if full_obj.load_add_edit_fields}}
+	<div id="form_container" class="width-100">
+		<input type="hidden" name="form_tech_spec_category_id" id="form_tech_spec_category_id" value="{{full_obj.data_obj.tech_spec_category_id}}" />
+		<input type="hidden" name="form_tech_spec_field_id" id="form_tech_spec_field_id" value="{{full_obj.data_obj.tech_spec_field_id}}" />
+		<input type="hidden" name="form_old_option_list" id="form_old_option_list" value="" />
+		<input type="hidden" name="form_tech_spec_options_selected" id="form_tech_spec_options_selected" value="" required="required" />
+		
+		<label class="form-label" for="form_tech_spec_field_name">Tech Spec Field Name</label>
+		<input type="text" class="form-input" name="form_tech_spec_field_name" id="form_tech_spec_field_name" value="{{full_obj.data_obj.tech_spec_field_name}}" required="required" />
+		<div class="form-status hidden" association="form_tech_spec_field_name">Please enter a Tech Spec Field Name.</div>
+		
+		<div id="tsm_display_value_unit" class="hidden">
+			<label class="form-label" for="form_tech_spec_field_unit">Tech Spec Field Unit</label>
+			<input type="text" class="form-input" name="form_tech_spec_field_unit" id="form_tech_spec_field_unit" value="{{full_obj.data_obj.tech_spec_field_unit}}" />
+			<div class="form-status hidden" association="form_tech_spec_field_unit">Please enter a Tech Spec Field Unit.</div>
+		</div>
+		
+		<label class="form-label" for="form_tech_spec_field_type">Tech Spec Field Type</label>
+		<select id="form_tech_spec_field_type" name="form_tech_spec_field_type" class="form-input" required="required">
+			<option value=""></option>
+			{{#each full_obj.data_obj.tech_spec_field_type_list}}
+			    <option value="{{tech_spec_field_type}}">{{tech_spec_field_type}}</option>
+			{{/each}} 
+		</select>
+		<div class="form-status hidden" association="form_tech_spec_field_type">Please select a Tech Spec Field Type.</div>
+		
+		<div id="tsm_add_options_container" class="hidden">
+			<label class="form-label" for="form_tech_spec_option">Tech Spec Option</label>
+			<input type="text" class="form-input" name="form_tech_spec_option" id="form_tech_spec_option"/>
+			<div class="form-button form-button-gray float-right" id="tsm_add_tech_spec_option">Add Tech Spec Option</div><br />
+			<div class="clear"></div>
+			
+			<div class="title-section">Tech Spec Options</div>
+			<div id="tsm_tech_specs_options_container" class="max-height-150 overflow-y-scroll">
+			    {{#each full_obj.data_obj.option}}
+					{{tech-spec-option-item item=this}}
+			    {{/each}}
+			</div>
+			<div class="form-status hidden" association="form_tech_spec_options_selected">Please enter a unique Tech Spec Option.</div>
+			
+		</div>
+	</div>
+	<div class="clear"></div>
+
+{{/if}}
+
+{{#if prepare_tech_spec_option_item}}
+	{{#each data_obj}}
+		{{tech-spec-option-item}}
+	{{/each}}
+{{/if}}

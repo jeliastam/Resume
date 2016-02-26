@@ -1,0 +1,26 @@
+<h2>
+    <img src="{{carrierDetails.images.logo}}">
+    <span>Plans</span>
+</h2>
+<div class="table-container" id="{{plan.type}}" ng-repeat="plan in carrierData.plans" paginate-it="{{plan.pagination}}">
+        <h4>
+            {{plan.name}}
+        </h4>
+        <div class="fake-table" id="{{carrier}}-table" ng-swipe-left="go(1)" ng-swipe-right="go(-1)">
+            <div class="column" ng-repeat="tier in plan.details">
+                <div class="cell" ng-repeat="attr in tier track by $index">
+                    <span>{{attr}}</span>
+                </div>
+            </div>
+        </div>
+    <div class="title">
+        <span>{{plan.disclaimer}}</span>
+    </div>
+</div>
+<div ng-repeat="map in carrierDetails.images track by $index" ng-if="!$first">
+        <h2>
+            <img src="{{carrierDetails.images.logo}}">
+            <span>{{map.title}}</span>
+        </h2>
+        <img class="map" src="{{map.url}}">
+</div>
