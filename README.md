@@ -2,22 +2,22 @@
 
 Here is a smattering of the work I have attributed to or independently built in my recent career.
 
-Walmart Select
+*Walmart Select*
 http://walmart-select.siiguides.com/
 
-Walmart Learn
+*Walmart Learn*  
 http://walmart-guides.siiguides.com/us/en/
 
-Asurion (4 carriers) Learn
+*Asurion Learn*  
 http://asurion-att.siiguides.com/us/en/
 http://asurion-bell.siiguides.com/us/en/
 http://asurion-sprint.siiguides.com/us/en/
 http://asurion-verizon.siiguides.com/us/en/
 
-Amazon.de Learn
+*Amazon.de Learn*  
 http://amazon-germany.siiguides.com/de/de/
 
-Amazon.de redesign for large screen display
+*Amazon.de Learn redesign for large screen display*  
 http://amazon-germany-tv.siiguides.com/de/de/samsung-ue48ju6560-curved-3029/articles
 
 # Resume
