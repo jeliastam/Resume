@@ -2,7 +2,7 @@
 
 Here is a smattering of the work I have attributed to or independently built in my recent career.
 
-*Walmart Select*
+*Walmart Select*  
 http://walmart-select.siiguides.com/
 
 *Walmart Learn*  
@@ -23,10 +23,10 @@ http://amazon-germany-tv.siiguides.com/de/de/samsung-ue48ju6560-curved-3029/arti
 # Resume
 
 
-Jordan Eliastam
-55 McCormack Ave
-Medford, MA 02155
-781.467.8520
+Jordan Eliastam  
+55 McCormack Ave  
+Medford, MA 02155  
+781.467.8520  
 jeliastam@gmail.com
 
 
@@ -40,7 +40,7 @@ March 2014 – November 2016
 * Worked with a small engineering team (5 max) to meet tight deadlines to push production code for demanding clients such as Walmart, Amazon, AT&T and Asurion
 * Worked independently on large projects requiring full LAMP stack knowledge - [Example Work](https://github.com/jeliastam/Resume/tree/master/full%20stack%20tools)
 * Redesigned multiple sites to be completely responsive and mobile-friendly - [Example of redesign](http://asurion-att.siiguides.com) - [Example of complete rebuild](http://walmart-guides.siiguides.com/us/en/)
-* Transformed a static asset and project management spreadsheet into a fully-automated tracking, reporting and invoicing system, through the use of Google’s Apps Script, complete with efficiency tracking and a “high-score” scrolling marquee for employee motivation [Example scripts](GITHUB LINK HERE)
+* Transformed a static asset and project management spreadsheet into a fully-automated tracking, reporting and invoicing system, through the use of Google’s Apps Script, complete with efficiency tracking and a “high-score” scrolling marquee for employee motivation [Example scripts](https://github.com/jeliastam/Resume/tree/master/Google%20apps%20scripts)
 
 Cream, a creative assembly - Founder  
 Brighton, MA  
