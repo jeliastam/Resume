@@ -60,7 +60,7 @@ August 2011 – April 2013
 
 ## Skills
 
-* Strict organizational regimen 
+* Strong focus on organization 
 * Insatiable appetite for learning
 * Unafraid of innovative and experimental solutions
 * Motivated and efficient worker in group and independent environments
