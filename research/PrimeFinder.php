@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: jeliastam
- * Date: 9/12/15
- * Time: 1:53 PM
- */
 class PrimeFinder
 {
 
@@ -94,20 +88,5 @@ class PrimeFinder
 
             $i++;
         }
-    }
-}
-
-function eratosthenes_sieve(&$sieve, $n) {
-    $i = 2;
-    while ($i <= $n) {
-        if ($sieve[$i] == 0) {
-            echo $i;
-            $j = $i;
-            while ($j <= $n) {
-                $sieve[$j] = 1;
-                $j += $i;
-            }
-        }
-        $i++;
     }
 }

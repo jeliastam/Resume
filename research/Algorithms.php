@@ -1,13 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: jeliastam
- * Date: 9/12/15
- * Time: 12:39 PM
- */
-
-
 class Algorithms
 {
     public $array = [];

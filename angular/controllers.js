@@ -114,7 +114,7 @@ app.controller('details', function ($scope, $routeParams) {
         $scope.product.video       = data.video       || null;
         reverseImageOrder();
         setCarrierAndOSImage();
-        //setProductBudgetLevel();
+        setProductBudgetLevel();
         $scope.$apply();
         setupVideo();
         resizeStage();

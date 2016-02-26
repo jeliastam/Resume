@@ -1,5 +1,6 @@
-# Resume
+# Welcome!
 
+Here is a smattering of the work I have attributed to or independently built in my recent career.
 
 Walmart Select
 http://walmart-select.siiguides.com/
@@ -19,7 +20,9 @@ http://amazon-germany.siiguides.com/de/de/
 Amazon.de redesign for large screen display
 http://amazon-germany-tv.siiguides.com/de/de/samsung-ue48ju6560-curved-3029/articles
 
-# Info
+# Resume
+
+
 Jordan Eliastam
 55 McCormack Ave
 Medford, MA 02155
@@ -27,63 +30,67 @@ Medford, MA 02155
 jeliastam@gmail.com
 
 
-# Experience
+## Experience
 
-Simply Interactive Inc - Software Engineer
-Seaport, Boston, MA
-March 2014 – November 2016
+Simply Interactive Inc - Software Engineer  
+Seaport, Boston, MA  
+March 2014 – November 2016  
 
-Maintained and improved in-house CMS, also contributed greatly to complete CMS overhaul
-Worked with a small engineering team (5 max) to meet tight deadlines to push production code for demanding clients such as Walmart, Amazon, AT&T and Asurion
-Worked independently on large projects requiring full LAMP stack knowledge
-Redesigned multiple sites to be completely responsive and mobile-friendly
-Transformed a static asset and project management spreadsheet into a fully-automated tracking, reporting and invoicing system, through the use of Google’s Apps Script, complete with efficiency tracking and a “high-score” scrolling marquee for employee motivation
+* Maintained and improved in-house CMS, also contributed greatly to complete CMS overhaul
+* Worked with a small engineering team (5 max) to meet tight deadlines to push production code for demanding clients such as Walmart, Amazon, AT&T and Asurion
+* Worked independently on large projects requiring full LAMP stack knowledge - [Example Work](https://github.com/jeliastam/Resume/tree/master/full%20stack%20tools)
+* Redesigned multiple sites to be completely responsive and mobile-friendly - [Example of redesign](http://asurion-att.siiguides.com) - [Example of complete rebuild](http://walmart-guides.siiguides.com/us/en/)
+* Transformed a static asset and project management spreadsheet into a fully-automated tracking, reporting and invoicing system, through the use of Google’s Apps Script, complete with efficiency tracking and a “high-score” scrolling marquee for employee motivation [Example scripts](GITHUB LINK HERE)
 
-Cream, a creative assembly - Founder
-Brighton, MA
-April 2013 – December 2014
+Cream, a creative assembly - Founder  
+Brighton, MA  
+April 2013 – December 2014  
 
-Roles ranged from Test Engineer to Team Leader as I applied myself where needed to vet contractor-submitted code or develop features independently
-Managed dynamic groups of subcontractors working in collaboration to meet and surpass clients’ expectations while maintaining budget and resource limitations
-Interacted, in person, with clients to clearly and accurately convey their specific needs, hopes and aspirations to our design and development team to minimize confusion and promote efficiency
+* Roles ranged from Test Engineer to Team Leader as I applied myself where needed to vet contractor-submitted code or develop features independently
+* Managed dynamic groups of subcontractors working in collaboration to meet and surpass clients’ expectations while maintaining budget and resource limitations
+* Interacted, in person, with clients to clearly and accurately convey their specific needs, hopes and aspirations to our design and development team to minimize confusion and promote efficiency
 
-JE 3D – Freelance web design and development
-Boston, MA / San José del Cabo, Mexico
-August 2011 – April 2013
+JE 3D – Freelance web design and development  
+Boston, MA / San José del Cabo, Mexico  
+August 2011 – April 2013  
 
-Identified and pursued new clients through word-of-mouth marketing and local advertising
-Worked with high-profile clients such as Puerto Los Cabos(PLC) and Snell Real Estate
-Independently managed and executed the migration of an exterior site into the main PLC domain
+* Identified and pursued new clients through word-of-mouth marketing and local advertising
+* Worked with high-profile clients such as Puerto Los Cabos(PLC) and Snell Real Estate
+* Independently managed and executed the migration of an exterior site into the main PLC domain
 
-# Skills
+## Skills
 
-Strict organizational regimen 
-Insatiable appetite for learning
-Unafraid of innovative and experimental solutions
-Motivated and efficient worker in group and independent environments
-Excellent critical thinker and problem solver
-Cooperative and engaging personality
+* Strict organizational regimen 
+* Insatiable appetite for learning
+* Unafraid of innovative and experimental solutions
+* Motivated and efficient worker in group and independent environments
+* Excellent critical thinker and problem solver
+* Cooperative and engaging personality
 
-# Languages
+## Languages
 
-HTML, JavaScript, PHP, CSS, Apache, SQL, Handlebars.js, Blade, Python, C#
+HTML, JavaScript, PHP, CSS, Apache, SQL, Handlebars.js, Blade, Python, C#, Markdown
 
-# Frameworks
+## Frameworks
 
 Wordpress, Laravel, Bootstrap, AngularJS
 
-# Environments
+## Environments
 
 OS X, Linux, Windows 7/8/10
 
 
-# Education
+## Education
 
-Harvard University Extension School                                                 		       September 2015 – Present
-Cambridge, MA
-Pursuing a Graduate Certificate in Software Engineering
-8 completed credits with a 98.75% in “Software Testing and Test-Driven Development”
+Harvard University Extension School  
+Cambridge, MA  
+September 2015 – Present
 
-California State Polytechnic University at San Luis Obispo                                       September 2006 – May 2007
-San Luis Obispo, CA
-Pursued a degree in Electrical Engineering
+* Pursuing a Graduate Certificate in Software Engineering
+* 8 completed credits with a 98.75% in “Software Testing and Test-Driven Development”
+
+California State Polytechnic University at San Luis Obispo  
+San Luis Obispo, CA  
+September 2006 – May 2007  
+
+* Pursued a degree in Electrical Engineering
