@@ -1,0 +1,4 @@
+# Experience with Python
+I have always been interested in web scraping and decided it was time to see what it was all about!  I came across (Scrapy)[http://scrapy.org/] and it was exactly what I was looking for!  So, I got to work.  This was not my first time with Python, but it ended up being the most formative.  I enjoyed figuring out how to be more "Pythonic" and beginning to scratch the surface of what this iconic language can do.  
+
+The file I have included is the spider I wrote for retrieving data from the website I was scraping using Scrapy via (Scrapinghub.com)[http://scrapinghub.com/].
